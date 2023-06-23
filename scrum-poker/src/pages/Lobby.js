@@ -1,20 +1,23 @@
-import { Button, Center, VStack } from '@chakra-ui/react'
+import { Button, Center, VStack, Box } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Lobby = () => {
 	return (
-        <Center py={4} display={{md:'flex'}} borderWidth={2} borderColor='black'>
+        <Box py={4}>
             <VStack>
                 <Link to='/host'>
-                    <Button size='lg' colorScheme='blue' mx='auto'>
+                    <Button size='lg' colorScheme='blue' mx='auto' my='auto'>
                         Host Session
                     </Button>
                 </Link>
 
-                <Button size='lg' colorScheme='blue' mx='auto'>
-                    Join Session
-                </Button>
+                <Link to='/join'>
+                    <Button size='lg' colorScheme='blue' mx='auto' my='auto'>
+                        Join Session
+                    </Button>
+                </Link>
+
             </VStack>
 
                 {/* <div className='flex flex-col w-96 mx-auto'>
@@ -37,7 +40,7 @@ const Lobby = () => {
                 </Box>} */}
                 {/* </div> */}
 
-        </Center>
+        </Box>
 
 
 	)

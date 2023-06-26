@@ -4,6 +4,7 @@ import Lobby from './pages/Lobby';
 import Host from './pages/Host';
 import Join from './pages/Join';
 import NoPage from './pages/NoPage';
+import Room from './pages/Room';
 import { Box, Container } from '@chakra-ui/react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Lobby />} />
           <Route path='/host' element={<Host />} />
           <Route path='/join' element={<Join />} />
+          <Route path='/room' element={<Room />} />
           <Route path='*' element={<NoPage />} />
         </Routes>
       </Container>
